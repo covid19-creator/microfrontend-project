@@ -1,9 +1,20 @@
-.light-theme {
-    --color-background: #ffffff;
-    --color-text: #000000;
-  }
-  
-  .dark-theme {
-    --color-background: #333333;
-    --color-text: #ffffff;
-  }
+/* Light Theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #212529;
+  --card-background: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --card-background: #343a40;
+  --border-color: #495057;
+}
+
+/* Apply Smooth Theme Transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

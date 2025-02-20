@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Button } from "../shared-components";
+import { BrowserRouter as Router, Routes, Route,  } from "react-router-dom";
+import Home from "./pages/Home";
 
 const ChatApp = lazy(() => import("chat/ChatApp"));
 const EmailApp = lazy(() => import("email/EmailApp"));
@@ -8,19 +8,13 @@ const EmailApp = lazy(() => import("email/EmailApp"));
 function App() {
   return (
     <Router>
-      <div>
-        <h1>Host Application</h1>
-        <Button onClick={() => alert('Clicked!')}>Click Me</Button>
-        <nav>
-          <Link to="/chat">Chat</Link> | <Link to="/email">Email</Link>
-        </nav>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/chat" element={<ChatApp />} />
-            <Route path="/email" element={<EmailApp />} />
+          <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<h2><ChatApp/></h2>} />
+        <Route path="/email" element={<h2><EmailApp/></h2>} />
           </Routes>
         </Suspense>
-      </div>
     </Router>
   );
 }

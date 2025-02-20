@@ -1,4 +1,84 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body takes full width and centers content */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ✅ Centers everything horizontally */
+  justify-content: center;  /* ✅ Centers everything vertically if needed */
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+}
+
+
+/* Set up a responsive container */
+.container {
+  width: 90%;
+  max-width: var(--max-width-container, 1200px); /* Set a default max width */
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+/* Nested content container (for text-heavy sections) */
+.content {
+  max-width: var(--max-width-content, 800px); /* Set a default max width */
+  margin: 0 auto;
+  padding: var(--spacing-lg) 0;
+}
+
+/* Ensure proper spacing between sections */
+.section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Flexbox utility */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid Layout for Complex Components */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  place-items: center; /* Centers grid items */
+}
+
+/* Buttons */
+.button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: var(--spacing-md);
   }
+
+  .content {
+    padding: var(--spacing-md) 0;
+  }
+
+  .section {
+    margin-bottom: var(--spacing-2xl);
+  }
+}

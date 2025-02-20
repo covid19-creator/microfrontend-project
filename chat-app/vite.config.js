@@ -15,7 +15,15 @@ export default defineConfig({
       exposes: {
         "./ChatApp": "./src/ChatApp.jsx",
       },
-      remotes:{},
+      remotes: {
+        head_wrapper: {
+					type: 'module',
+					name: 'head_wrapper',
+					entry: 'http://localhost:5000/remoteEntry.js',
+					entryGlobalName: 'head_wrapper',
+					shareScope: 'default',
+				},
+      },
 
       shared: {
 					react: {
