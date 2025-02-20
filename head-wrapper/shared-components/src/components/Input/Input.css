@@ -1,0 +1,9 @@
+/* Button.css */
+.input {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-medium);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
