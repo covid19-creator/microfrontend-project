@@ -101,3 +101,31 @@
     align-items: center;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* ✅ Notification Styling */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #39b54a; /* Green background */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+/* ✅ Hide notification smoothly */
+.notification.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+>>>>>>> 599cf48 (added zustand and window events)

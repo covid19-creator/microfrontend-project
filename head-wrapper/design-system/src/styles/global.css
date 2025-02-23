@@ -20,7 +20,11 @@ body {
 
 /* Set up a responsive container */
 .container {
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 100%;
+>>>>>>> 599cf48 (added zustand and window events)
   max-width: var(--max-width-container, 1200px); /* Set a default max width */
   margin: 0 auto;
   padding: var(--spacing-lg);

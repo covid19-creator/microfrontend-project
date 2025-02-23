@@ -73,6 +73,11 @@ Works well with React and improves local development speed.
 This keeps styles modular and avoids conflicts between micro-apps
 **Trade-off**: Some Developers prefer taiwind css or UI libraries for development.
 
+<<<<<<< HEAD
+=======
+-I have used zustand and window events for the local communication, but we can use socket/ or message queue for the production.
+
+>>>>>>> 599cf48 (added zustand and window events)
 The testing is must before the deployment.(which is not included in this till now).
 
 ## How this architecture can support the addition of new microfrontend

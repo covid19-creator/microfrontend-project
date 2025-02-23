@@ -30,6 +30,10 @@ export default defineConfig({
       exposes: {
         './design-system': './design-system/index.js',
         './shared-components': './shared-components/index.js',
+<<<<<<< HEAD
+=======
+        './globalStore': './src/store/globalStore.js'
+>>>>>>> 599cf48 (added zustand and window events)
       },
       filename: "remoteEntry.js",
       shared: {
